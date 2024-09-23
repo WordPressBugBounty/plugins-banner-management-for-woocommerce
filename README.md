@@ -1,0 +1,1 @@
+# plugins-banner-management-for-woocommerce
