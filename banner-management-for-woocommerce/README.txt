@@ -2,10 +2,10 @@
 Contributors: dots
 Tags: product slider, carousel slider, woocommerce slider, product category slider, shop banner
 Donate link: https://www.thedotstore.com/
-Stable tag: 2.5.0
+Stable tag: 2.5.1
 Requires at least: 5.0
-Tested up to: 6.6.1
-WC tested up to: 9.1.4
+Tested up to: 6.7.2
+WC tested up to: 9.7.1
 Requires PHP: 7.2
 Copyright: (c) 2015-2019 Thedotstore all rights reserved (support@thedotstore.com)
 License: GPLv3 or later
@@ -166,6 +166,12 @@ Add this css on your themes style or any css: <strong>.wbm_banner_image { order:
 
 
 == Changelog ==
+= 2.5.1 =
+* [Enhancement] Added image alt attribute
+* [Enhancement] Made plugin compatible with Astra theme
+* [Enhancement] Compatible with WooCommerce 9.7.x
+* [Enhancement] Compatible with WordPress 6.7.x
+
 = 2.5.0 =
 * [Bug Fix] Minor fixes related to the category based banner
 * [Enhancement] Plugin UI Enhancement

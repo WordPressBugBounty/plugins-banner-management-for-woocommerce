@@ -1065,6 +1065,8 @@ class woocommerce_category_banner_management_Admin {
         $banner_detail_page_banner_enable_or_not_results = ( !empty( $banner_detail_page_banner_enable_or_not_results ) ? $banner_detail_page_banner_enable_or_not_results : '' );
         $banner_detail_page_section_banner_enable_or_not_results = filter_input( INPUT_POST, 'banner_detail_page_section_banner_enable_or_not_results', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
         $banner_detail_page_section_banner_enable_or_not_results = ( !empty( $banner_detail_page_section_banner_enable_or_not_results ) ? $banner_detail_page_section_banner_enable_or_not_results : '' );
+        $banner_detail_page_banner_relation_dots_results = '';
+        $banner_detail_page_banner_target_dots_results = '';
         $other_page_banner_image_results = filter_input( INPUT_POST, 'other_page_banner_image_results', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
         $other_page_banner_image_results = ( !empty( $other_page_banner_image_results ) ? $other_page_banner_image_results : '' );
         $other_page_banner_link_results = filter_input( INPUT_POST, 'other_page_banner_link_results', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
@@ -1087,6 +1089,8 @@ class woocommerce_category_banner_management_Admin {
         $product_cat_slider_settings_feature_img_results = ( !empty( $product_cat_slider_settings_feature_img_results ) ? $product_cat_slider_settings_feature_img_results : '' );
         $product_cat_slider_settings_by_desc_results = filter_input( INPUT_POST, 'product_cat_slider_settings_by_desc_results', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
         $product_cat_slider_settings_by_desc_results = ( !empty( $product_cat_slider_settings_by_desc_results ) ? $product_cat_slider_settings_by_desc_results : '' );
+        $product_cat_slider_settings_cat_results = array();
+        $product_slider_settings_featured_prod_results = array();
         $shop_page_data_stored_array = array(
             'shop_page_banner_image_src'       => $shop_page_banner_image_results,
             'shop_page_banner_link_src'        => $shop_page_banner_link_results,
@@ -1527,6 +1531,7 @@ class woocommerce_category_banner_management_Admin {
             echo sprintf( '<div id="message" class="notice notice-error is-dismissible"><p>%s</p></div>', esc_html( $validated_messsage ) );
             return false;
         }
+        return true;
     }
 
     /**
@@ -2356,10 +2361,11 @@ class woocommerce_category_banner_management_Admin {
                                 if ( isset( $wbm_parent_child_display_type ) && 'under_parent' === $wbm_parent_child_display_type && 'parent and child' === $dswbm_child_categories ) {
                                     if ( $term->term_id ) {
                                         $child_arg = array(
+                                            'taxonomy'   => 'product_cat',
                                             'hide_empty' => false,
                                             'parent'     => $term->term_id,
                                         );
-                                        $child_categories = get_terms( 'product_cat', $child_arg );
+                                        $child_categories = get_terms( $child_arg );
                                         foreach ( $child_categories as $tm ) {
                                             echo '<p class="cat-desc">' . esc_html( $tm->name, 'banner-management-for-woocommerce' ) . '</p>';
                                         }
@@ -2640,7 +2646,7 @@ class woocommerce_category_banner_management_Admin {
         $wbm_prod_pager_color = ( !empty( $get_wbm_prod_pager_color ) ? sanitize_text_field( wp_unslash( $get_wbm_prod_pager_color ) ) : '' );
         $wbm_prod_pager_active_color = ( !empty( $get_wbm_prod_pager_active_color ) ? sanitize_text_field( wp_unslash( $get_wbm_prod_pager_active_color ) ) : '' );
         $wbm_prod_pager_hov_color = ( !empty( $get_wbm_prod_pager_hov_color ) ? sanitize_text_field( wp_unslash( $get_wbm_prod_pager_hov_color ) ) : '' );
-        $dswbm_slider_mod = ( !empty( $dswbm_slider_mod ) ? sanitize_text_field( wp_unslash( $dswbm_slider_mod ) ) : '' );
+        $dswbm_slider_mode = ( !empty( $dswbm_slider_mode ) ? sanitize_text_field( wp_unslash( $dswbm_slider_mode ) ) : '' );
         $wbm_prod_thumb_zoom = ( !empty( $wbm_prod_thumb_zoom ) ? sanitize_text_field( wp_unslash( $wbm_prod_thumb_zoom ) ) : '' );
         $wbm_prod_v_offset = ( !empty( $wbm_prod_v_offset ) ? sanitize_text_field( wp_unslash( $wbm_prod_v_offset ) ) : 0 );
         $wbm_prod_h_offset = ( !empty( $wbm_prod_h_offset ) ? sanitize_text_field( wp_unslash( $wbm_prod_h_offset ) ) : 0 );
@@ -2744,7 +2750,8 @@ class woocommerce_category_banner_management_Admin {
         }
         ?>
 			<?php 
-        $current_theme = get_current_theme();
+        $current_theme_ob = wp_get_theme();
+        $current_theme = $current_theme_ob->name;
         ?>
 			<style>
 				<?php 

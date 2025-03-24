@@ -638,6 +638,7 @@ if ( !class_exists( 'wbm_banner_management_category_slider_Page' ) ) {
                     }
                 }
             }
+            return false;
         }
 
         /**

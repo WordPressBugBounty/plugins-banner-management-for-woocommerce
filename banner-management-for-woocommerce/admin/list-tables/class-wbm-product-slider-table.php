@@ -170,7 +170,7 @@ if ( ! class_exists( 'wcbm_banner_management_product_slider_Table' ) ) {
                             <a href="' . wp_nonce_url( $editurl, 'edit_' . $item->ID, 'cust_nonce' ) . '" class="row-title">' . esc_html( $item->post_title ) . '</a>
                         </strong>';
 
-			echo wp_kses( $method_name, self::$admin_object->wcbm_allowed_html_tags() );
+			return wp_kses( $method_name, self::$admin_object->wcbm_allowed_html_tags() );
 		}
 
 		/**
@@ -185,7 +185,7 @@ if ( ! class_exists( 'wcbm_banner_management_product_slider_Table' ) ) {
 		public function column_shortcode( $item ) {
 			$method_name = '<div class="wbm-after-copy-text"><span class="dashicons dashicons-yes-alt"></span> Shortcode  Copied to Clipboard! </div><input class="wbm-copy-shortcode" type="text" value="[wcbm_product id=&quot;'.$item->ID.'&quot;]" readonly="readonly">';
 
-			echo wp_kses( $method_name, self::$admin_object->wcbm_allowed_html_tags() );
+			return wp_kses( $method_name, self::$admin_object->wcbm_allowed_html_tags() );
 		}
 
 		/**
@@ -301,7 +301,7 @@ if ( ! class_exists( 'wcbm_banner_management_product_slider_Table' ) ) {
 
 			$deletenonce = wp_verify_nonce( $delete_nonce, 'bulk-wbmSliders' );
 
-			if ( ! isset( $deletenonce ) && 1 !== $deletenonce ) {
+			if ( isset( $deletenonce ) && 1 !== $deletenonce ) {
 				return;
 			}
 

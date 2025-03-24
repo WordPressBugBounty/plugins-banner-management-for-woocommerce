@@ -347,8 +347,21 @@ if ( !class_exists( 'WCBM_banners_display_methods' ) ) {
                     if ( is_numeric( $url ) ) {
                         $url = wp_get_attachment_url( $url );
                     }
+                    if ( isset( $url ) && !empty( $url ) ) {
+                        $attachment_id = attachment_url_to_postid( $url );
+                        // phpcs:ignore
+                    }
+                    if ( $attachment_id ) {
+                        $alt_tag_value = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
+                        $image_title = get_the_title( $attachment_id );
+                        // Get image title
+                    } else {
+                        $alt_tag_value = 'Banner Image';
+                        $image_title = 'Banner Image Title';
+                        // Fallback title
+                    }
                     if ( false !== $url ) {
-                        echo "<img src='" . esc_url( $url ) . "' class='category_banner_image' />";
+                        echo "<img src='" . esc_url( $url ) . "' class='category_banner_image' alt='" . esc_attr( $alt_tag_value ) . "' title='" . esc_attr( $image_title ) . "' />";
                     }
                     if ( isset( $link ) ) {
                         echo "</a>";
@@ -496,7 +509,7 @@ if ( !class_exists( 'WCBM_banners_display_methods' ) ) {
                         <div class="wbm_banner_image <?php 
                     echo esc_attr( $cat_page_select_size_class );
                     ?>">
-                        <?php 
+                            <?php 
                     // Get the banner link if it exists
                     if ( '' !== $term_options['banner_link'] ) {
                         $link = $term_options['banner_link'];

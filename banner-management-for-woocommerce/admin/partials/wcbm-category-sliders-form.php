@@ -336,7 +336,8 @@ if ( isset( $wbm_category_slider_general_meta ) && !empty( $wbm_category_slider_
         ?>">
 											<?php 
         // get woocommerce products categories
-        $cat_slider_terms = get_terms( 'product_cat', array(
+        $cat_slider_terms = get_terms( array(
+            'taxonomy'   => 'product_cat',
             'hide_empty' => true,
         ) );
         if ( !empty( $cat_slider_terms ) && !is_wp_error( $cat_slider_terms ) ) {
@@ -754,7 +755,8 @@ if ( isset( $wbm_category_slider_general_meta ) && !empty( $wbm_category_slider_
     ?>">
 										<?php 
     // get woocommerce products categories
-    $cat_slider_terms = get_terms( 'product_cat', array(
+    $cat_slider_terms = get_terms( array(
+        'taxonomy'   => 'product_cat',
         'hide_empty' => true,
     ) );
     if ( !empty( $cat_slider_terms ) && !is_wp_error( $cat_slider_terms ) ) {

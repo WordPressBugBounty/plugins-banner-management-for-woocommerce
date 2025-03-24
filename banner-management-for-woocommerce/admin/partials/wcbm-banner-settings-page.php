@@ -276,6 +276,9 @@ echo esc_attr( $setting_enable_or_color );
 esc_html_e( $setting_enable_or_not, 'banner-management-for-woocommerce' );
 ?>
                         </span>
+                        <p data-href="<?php 
+echo esc_url( 'https://docs.thedotstore.com/article/260-how-to-add-banner-on-shop-page' );
+?>" class="wcbm-doc-link"></p>
                     </a>
                     <div id="wbm-enable-banner-for-shpe-page" class="accordion-section-content">
 
@@ -479,6 +482,9 @@ echo esc_attr( $setting_enable_or_color_cart );
                             <?php 
 esc_html_e( $setting_enable_or_not_cart, 'banner-management-for-woocommerce' );
 ?></span>
+                        <p data-href="<?php 
+echo esc_url( 'https://docs.thedotstore.com/article/261-how-to-add-banner-on-cart-page' );
+?>" class="wcbm-doc-link"></p>
                     </a>
                     <div id="wbm-enable-banner-for-cart-page" class="accordion-section-content">
                         <div class="woocommerce-banner-managment-cart-setting-admin">
@@ -689,6 +695,9 @@ echo esc_attr( $setting_enable_or_color_checkout );
 esc_html_e( $setting_enable_or_not_checkout, 'banner-management-for-woocommerce' );
 ?>
                         </span>
+                        <p data-href="<?php 
+echo esc_url( 'https://docs.thedotstore.com/article/262-how-to-add-banner-on-checkout-page' );
+?>" class="wcbm-doc-link"></p>
                     </a>
                     <div id="wbm-enable-banner-for-checkout-page" class="accordion-section-content">
                         <div class="woocommerce-banner-managment-checkout-setting-admin">
@@ -896,7 +905,12 @@ esc_html_e( 'Banner for thank you page', 'banner-management-for-woocommerce' );
 echo esc_attr( $setting_enable_or_color_thankyou );
 ?>"><?php 
 esc_html_e( $setting_enable_or_not_thankyou, 'banner-management-for-woocommerce' );
-?></span></a>
+?>
+                        </span>
+                        <p data-href="<?php 
+echo esc_url( 'https://docs.thedotstore.com/article/263-how-to-add-banner-on-thank-you-page' );
+?>" class="wcbm-doc-link"></p>
+                    </a>
                     <div id="wbm-enable-banner-for-thankyou-page" class="accordion-section-content">
                         <div class="woocommerce-banner-managment-thank-you-setting-admin">
                             <table class="form-table" id="form-table-wbm-thankyou-page">
@@ -1081,6 +1095,9 @@ esc_html_e( 'You can set global options for Woocommerce pages and products.', 'b
                         href="#wbm-enable-for-banner-width"><?php 
 esc_html_e( 'Default woocommerce page banner settings', 'banner-management-for-woocommerce' );
 ?>
+                        <p data-href="<?php 
+echo esc_url( 'https://docs.thedotstore.com/article/1081-how-to-set-the-default-banner-size' );
+?>" class="wcbm-doc-link"></p>
                     </a>
                     <div id="wbm-enable-for-banner-width" class="accordion-section-content">
                         <div class="global_settings">
@@ -1174,7 +1191,12 @@ esc_html_e( 'Product page banner settings', 'banner-management-for-woocommerce' 
 echo esc_attr( $setting_enable_or_color_banner_detail );
 ?>"><?php 
 esc_html_e( $setting_enable_or_not_banner_detail, 'banner-management-for-woocommerce' );
-?></span></a>
+?>
+                        </span>
+                        <p data-href="<?php 
+echo esc_url( 'https://docs.thedotstore.com/article/385-how-to-set-global-banner-for-all-the-products' );
+?>" class="wcbm-doc-link"></p>
+                    </a>
                     <div id="wbm-enable-banner-for-product-detail-page" class="accordion-section-content">
                         <div class="woocommerce-banner-managment-thank-you-setting-admin">
                             <table class="form-table" id="form-table-wbm-banner_detail-page">
@@ -1382,6 +1404,9 @@ echo esc_attr( $setting_enable_or_color );
 esc_html_e( $setting_enable_or_not, 'banner-management-for-woocommerce' );
 ?>
                         </span>
+                        <p data-href="<?php 
+echo esc_url( 'https://docs.thedotstore.com/article/1082-how-to-set-global-banner-for-other-pages' );
+?>" class="wcbm-doc-link"></p>
                     </a>
                     <div id="wbm-enable-banner-for-other-pages" class="accordion-section-content">
 
@@ -1592,7 +1617,11 @@ esc_html_e( 'Products, Common pages, Categories, and Tags preview and settings',
                 <div class="accordion-section">
                     <a class="accordion-section-title" href="#wbm-enable-product-banner-settings-ss"><?php 
 esc_html_e( 'Product specific banner settings', 'banner-management-for-woocommerce' );
-?></a>
+?>
+                        <p data-href="<?php 
+echo esc_url( 'https://docs.thedotstore.com/article/382-how-to-add-banner-on-product-page' );
+?>" class="wcbm-doc-link"></p>
+                    </a>
                     <div id="wbm-enable-product-banner-settings-ss" class="accordion-section-content">
                         <p><?php 
 esc_html_e( 'You can upload custom banner at the top of your product pages. Easily update the image through your product edit page.', 'banner-management-for-woocommerce' );
@@ -1631,7 +1660,11 @@ esc_html_e( 'click here', 'banner-management-for-woocommerce' );
                 <div class="accordion-section">
                     <a class="accordion-section-title" href="#wbm-enable-other-page-banner-settings-ss"><?php 
 esc_html_e( 'Other pages specific banner settings', 'banner-management-for-woocommerce' );
-?></a>
+?>
+                        <p data-href="<?php 
+echo esc_url( 'https://docs.thedotstore.com/article/1083-how-to-add-banner-on-other-page' );
+?>" class="wcbm-doc-link"></p>
+                    </a>
                     <div id="wbm-enable-other-page-banner-settings-ss" class="accordion-section-content">
                         <p><?php 
 esc_html_e( 'You can upload custom banner at the top of your website other pages. Easily update the image through your website other pages edit page.', 'banner-management-for-woocommerce' );
@@ -1670,7 +1703,11 @@ esc_html_e( 'click here', 'banner-management-for-woocommerce' );
                 <div class="accordion-section">
                     <a class="accordion-section-title" href="#wbm-enable-category-banner-settings-ss"><?php 
 esc_html_e( 'Category specific banner settings', 'banner-management-for-woocommerce' );
-?></a>
+?>
+                        <p data-href="<?php 
+echo esc_url( 'https://docs.thedotstore.com/article/264-how-to-add-banner-on-category-page' );
+?>" class="wcbm-doc-link"></p>
+                    </a>
                     <div id="wbm-enable-category-banner-settings-ss" class="accordion-section-content">
                         <p><?php 
 esc_html_e( 'You can upload custom banner at the top of your product category pages. Easily update the image through your product category edit page.', 'banner-management-for-woocommerce' );
@@ -1713,7 +1750,11 @@ esc_html_e( 'click here', 'banner-management-for-woocommerce' );
                 <div class="accordion-section">
                     <a class="accordion-section-title" href="#wbm-enable-tag-banner-settings-ss"><?php 
 esc_html_e( 'Tag specific banner settings', 'banner-management-for-woocommerce' );
-?></a>
+?>
+                        <p data-href="<?php 
+echo esc_url( 'https://docs.thedotstore.com/article/264-how-to-add-banner-on-category-page' );
+?>" class="wcbm-doc-link"></p>
+                    </a>
                     <div id="wbm-enable-tag-banner-settings-ss" class="accordion-section-content">
                         <p><?php 
 esc_html_e( 'You can upload custom banner at the top of your product tag pages. Easily update the image through your product tag edit page.', 'banner-management-for-woocommerce' );

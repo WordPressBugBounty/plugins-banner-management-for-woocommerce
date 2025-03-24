@@ -80,7 +80,7 @@ class woocommerce_category_banner_management {
             "{$prefix}plugin_action_links_" . plugin_basename( dirname( dirname( __FILE__ ) ) . '/woocommerce-category-banner-management.php' ),
             array($this, 'plugin_action_links'),
             10,
-            4
+            1
         );
         add_filter(
             'plugin_row_meta',
@@ -206,6 +206,7 @@ class woocommerce_category_banner_management {
         /** Product banner html code */
         if ( !function_exists( 'product_banner_settings_callback' ) ) {
             function product_banner_settings_callback() {
+                // @phpstan-ignore-line
                 // Upgrade to pro popup
                 if ( !(wcbm_fs()->is__premium_only() && wcbm_fs()->can_use_premium_code()) ) {
                     require_once WCBM_PLUGIN_BASE_DIR . 'admin/partials/dots-upgrade-popup.php';
@@ -785,6 +786,7 @@ class woocommerce_category_banner_management {
         /** Define the metabox for product detail page */
         if ( !function_exists( 'add_banner_on_product_page_metabox' ) ) {
             function add_banner_on_product_page_metabox() {
+                // @phpstan-ignore-line
                 $screens = ['product'];
                 foreach ( $screens as $screen ) {
                     add_meta_box(
@@ -813,21 +815,36 @@ class woocommerce_category_banner_management {
                 }
             }
         }
-        $this->loader->add_action(
-            'woocommerce_before_main_content',
-            $plugin_admin,
-            'wcbm_show_category_banner',
-            5
-        );
-        $this->loader->add_action(
-            'woocommerce_before_main_content',
-            $plugin_admin,
-            'wcbm_show_shop_page_banner',
-            5
-        );
-        /** Display checkout page banner here */
+        /** Display category and shop page banner here */
         $current_theme = wp_get_theme();
-        // gets the current theme
+        if ( 'Astra' === $current_theme->name || 'Astra' === $current_theme->parent_theme ) {
+            $this->loader->add_action(
+                'woocommerce_before_shop_loop',
+                $plugin_admin,
+                'wcbm_show_category_banner',
+                5
+            );
+            $this->loader->add_action(
+                'woocommerce_before_shop_loop',
+                $plugin_admin,
+                'wcbm_show_shop_page_banner',
+                5
+            );
+        } else {
+            $this->loader->add_action(
+                'woocommerce_before_main_content',
+                $plugin_admin,
+                'wcbm_show_category_banner',
+                5
+            );
+            $this->loader->add_action(
+                'woocommerce_before_main_content',
+                $plugin_admin,
+                'wcbm_show_shop_page_banner',
+                5
+            );
+        }
+        /** Display checkout page banner here */
         $this->loader->add_action(
             'woocommerce_before_cart',
             $plugin_admin,

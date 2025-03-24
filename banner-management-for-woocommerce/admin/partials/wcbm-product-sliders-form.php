@@ -199,10 +199,10 @@ if ( isset( $wbm_product_slider_general_meta ) && !empty( $wbm_product_slider_ge
         ?></option>
 											<?php 
         ?>
-												<option value="wbm_by_categories"><?php 
+												<option value=""><?php 
         esc_html_e( 'Specific Category(s) 🔒', 'banner-management-for-woocommerce' );
         ?></option>
-												<option value="wbm_exclude_product"><?php 
+												<option value=""><?php 
         esc_html_e( 'Exclude Product(s) 🔒', 'banner-management-for-woocommerce' );
         ?></option>
 												<?php 

@@ -94,10 +94,10 @@ function wcbm_category_slider_shortcode_callback(  $atts  ) {
     ), $atts, 'wcbm_category_slider' );
     // setup query
     $args = array(
-        'post_type'  => 'product',
+        'taxonomy'   => 'product_cat',
         'hide_empty' => false,
     );
-    $terms = get_terms( 'product_cat', $args );
+    $terms = get_terms( $args );
     ob_start();
     ?>
 	<div class="wbm_banner_random_image">
@@ -1145,10 +1145,11 @@ function wcbm_category_sliders_shortcode_callback_method(  $atts  ) {
                             if ( isset( $wbm_parent_child_display_type ) && 'under_parent' === $wbm_parent_child_display_type && 'parent and child' === $dswbm_child_categories ) {
                                 if ( $term->term_id ) {
                                     $child_arg = array(
+                                        'taxonomy'   => 'product_cat',
                                         'hide_empty' => false,
                                         'parent'     => $term->term_id,
                                     );
-                                    $child_categories = get_terms( 'product_cat', $child_arg );
+                                    $child_categories = get_terms( $child_arg );
                                     foreach ( $child_categories as $tm ) {
                                         echo '<p class="cat-desc">' . esc_html( $tm->name, 'banner-management-for-woocommerce' ) . '</p>';
                                     }
