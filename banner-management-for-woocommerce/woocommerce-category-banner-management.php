@@ -13,7 +13,7 @@
  * @package           Woo_Banner_Management
  *
  * @wordpress-plugin
- * Plugin Name: Banner Management For WooCommerce
+ * Plugin Name: Banner Management, Product Slider, Product Carousel for WooCommerce
  * Plugin URI:        https://www.thedotstore.com/woocommerce-category-banner-management/
  * Description:       With this plugin, You can easily add banner in WooCommerce stores and you can upload the banner  specific for page,category  and welcome page.
  * Version:           2.5.1

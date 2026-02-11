@@ -1,4 +1,4 @@
-== Banner Management For WooCommerce ==
+== Banner Management, Product Slider, Product Carousel for WooCommerce ==
 Contributors: dots
 Tags: product slider, carousel slider, woocommerce slider, product category slider, shop banner
 Donate link: https://www.thedotstore.com/
@@ -102,6 +102,12 @@ Need even more features? upgrade the premium plugin version to get all the advan
 
 <li><strong>Free plugin:</strong> Need Technical Help? - <a href="https://wordpress.org/support/plugin/banner-management-for-woocommerce/">Click here</a></li>
 <li><strong>Pro Plugin:</strong> PRE-SALE Query – <a href="https://www.thedotstore.com/support/">Click here</a> or <a href="https://docs.thedotstore.com/collection/252-banner-management">Review Help Document</a></li>
+
+== 🎯 Supercharge Your Store Performance ==
+
+Gain access to <strong>50 expert tips</strong> covering everything from <strong>site speed</strong> and <strong>user experience</strong> to advanced sales strategies, each with impact scores to help you prioritize what truly drives results.
+
+<a href ="https://www.thedotstore.com/?popup_id=76452&utm_source=freeplugin&utm_medium=content&utm_id=ebook1_woo_banner" target="_blank">Download Free eBook</a>
 
 == EXPLORE OUR OTHER PLUGINS TO SUPERCHARGE YOUR WEBSITE: ==
 
