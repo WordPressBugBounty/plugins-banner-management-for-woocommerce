@@ -135,6 +135,28 @@ function get_banner_for_category($category_id) {
 }
 
 /**
+ * This function checks the brand banner data for parent inheritance.
+ *
+ * @param $brand_id
+ *
+ * @return int|false
+ */
+function get_banner_for_brand($brand_id) {
+	
+	$term_options = function_exists('wcbm_get_category_banner_data') ? wcbm_get_category_banner_data($brand_id) : '';
+
+	if (isset($term_options['same_banner_for_child']) && !empty($term_options['same_banner_for_child']) && 'on' === $term_options['same_banner_for_child']) {
+		return $brand_id;
+	} elseif ($brand_id !== 0) {
+		$brand = get_term($brand_id, 'product_brand');
+		if (!is_wp_error($brand) && $brand ) {
+			return get_banner_for_brand($brand->parent);
+		}
+	}
+	return false;
+}
+
+/**
  * This function update the category banner data.
  *
  * @param $p_catid

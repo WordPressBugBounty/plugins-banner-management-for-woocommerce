@@ -1794,6 +1794,53 @@ esc_html_e( 'click here', 'banner-management-for-woocommerce' );
                         </p>
                     </div>
                 </div>
+                <div class="accordion-section">
+                    <a class="accordion-section-title" href="#wbm-enable-brand-banner-settings-ss"><?php 
+esc_html_e( 'Brand specific banner settings', 'banner-management-for-woocommerce' );
+?>
+                        <p data-href="<?php 
+echo esc_url( 'https://docs.thedotstore.com/article/264-how-to-add-banner-on-category-page' );
+?>" class="wcbm-doc-link"></p>
+                    </a>
+                    <div id="wbm-enable-brand-banner-settings-ss" class="accordion-section-content">
+                        <p><?php 
+esc_html_e( 'You can upload custom banner at the top of your product brand pages. Easily update the image through your product brand edit page.', 'banner-management-for-woocommerce' );
+?>
+                        </p>
+                        <p>
+                            <a href="javascript:void(0);" class="wbm-open-popup"><?php 
+esc_html_e( 'Click here', 'banner-management-for-woocommerce' );
+?></a><?php 
+esc_html_e( ' to preview product brand page banner settings.', 'banner-management-for-woocommerce' );
+?>
+                        </p>
+                        <div class="wbm-popup-image">
+                            <div class="wbm-popup-outer">
+                                <div class="wbm-popup-inner">
+                                    <i class="dashicons dashicons-no wbm-popup-close" title="Dismiss"></i>
+                                    <?php 
+?>
+                                            <img class="preview_category_page_image" src="<?php 
+echo esc_url( plugin_dir_url( __FILE__ ) . 'images/brand_setting_image.png' );
+?>">
+                                    <?php 
+?>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            <strong><?php 
+esc_html_e( 'Go to Brand page', 'banner-management-for-woocommerce' );
+?></strong>
+                            <a target="_blank"
+                                href="<?php 
+echo esc_url( site_url() . '/wp-admin/edit-tags.php?taxonomy=product_brand&post_type=product' );
+?>"><?php 
+esc_html_e( 'click here', 'banner-management-for-woocommerce' );
+?></a>
+                        </p>
+                    </div>
+                </div>
             </div>
         </fieldset>
     </div>

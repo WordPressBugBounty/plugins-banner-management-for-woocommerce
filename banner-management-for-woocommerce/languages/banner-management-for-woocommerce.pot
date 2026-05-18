@@ -1,14 +1,14 @@
-# Copyright (C) 2025 theDotstore
+# Copyright (C) 2026 theDotstore
 # This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: Banner Management For WooCommerce Premium 2.5.1\n"
+"Project-Id-Version: Banner Management For WooCommerce Premium 2.5.2\n"
 "Report-Msgid-Bugs-To: https://www.multidots.com/contact/\n"
-"POT-Creation-Date: 2025-03-24 09:49:14+00:00\n"
+"POT-Creation-Date: 2026-05-18 10:50:42+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Sagar Jariwala <sagar.jariwala@multidots.com>\n"
 "Language-Team: Sagar Jariwala <sagar.jariwala@multidots.com>\n"
 "Language: en\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
-"X-Generator: grunt-wp-i18n 1.0.3\n"
+"X-Generator: grunt-wp-i18n 1.0.4\n"
 
 #: admin/partials/wcbm-category-sliders-form.php:4359
 #: admin/partials/wcbm-category-sliders-form.php:4461
@@ -146,19 +146,19 @@ msgid "Are you sure you want to delete?"
 msgstr ""
 
 #: admin/class-woocommerce-category-banner-management-admin.php:126
-#: admin/class-woocommerce-category-banner-management-admin.php:1010
+#: admin/class-woocommerce-category-banner-management-admin.php:1047
 #: admin/partials/wcbm-banner-settings-page.php:687
 #: admin/partials/wcbm-banner-settings-page.php:1023
 #: admin/partials/wcbm-banner-settings-page.php:1360
 #: admin/partials/wcbm-banner-settings-page.php:1680
 #: admin/partials/wcbm-banner-settings-page.php:2078
 #: admin/partials/wcbm-banner-settings-page.php:2440
-#: includes/class-woocommerce-category-banner-management.php:874
+#: includes/class-woocommerce-category-banner-management.php:878
 msgid "Enter banner image link"
 msgstr ""
 
 #: admin/class-woocommerce-category-banner-management-admin.php:127
-#: admin/class-woocommerce-category-banner-management-admin.php:435
+#: admin/class-woocommerce-category-banner-management-admin.php:443
 #: admin/partials/wcbm-banner-settings-page.php:417
 #: admin/partials/wcbm-banner-settings-page.php:751
 #: admin/partials/wcbm-banner-settings-page.php:1089
@@ -166,11 +166,12 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:2515
 #: admin/partials/wcbm-banner-settings-page.php:2540
 #: admin/partials/wcbm-banner-settings-page.php:2574
+#: admin/partials/wcbm-banner-settings-page.php:2608
 msgid "Click here"
 msgstr ""
 
 #: admin/class-woocommerce-category-banner-management-admin.php:128
-#: admin/class-woocommerce-category-banner-management-admin.php:433
+#: admin/class-woocommerce-category-banner-management-admin.php:438
 #: admin/partials/wcbm-banner-settings-page.php:417
 #: admin/partials/wcbm-banner-settings-page.php:751
 msgid "Preview"
@@ -211,32 +212,42 @@ msgid ""
 "review</a> :) Thanks!"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:415
+#: admin/class-woocommerce-category-banner-management-admin.php:416
 msgid "Category Based Banner Settings"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:417
+#: admin/class-woocommerce-category-banner-management-admin.php:418
 msgid "Tag Based Banner Settings"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:424
+#: admin/class-woocommerce-category-banner-management-admin.php:420
+msgid "Brand Based Banner Settings"
+msgstr ""
+
+#: admin/class-woocommerce-category-banner-management-admin.php:427
 #: admin/partials/wcbm-banner-settings-page.php:402
 #: admin/partials/wcbm-banner-settings-page.php:738
 #: admin/partials/wcbm-banner-settings-page.php:1075
 #: admin/partials/wcbm-banner-settings-page.php:1410
-#: includes/class-woocommerce-category-banner-management.php:332
+#: includes/class-woocommerce-category-banner-management.php:336
 msgid "Enable/Disable"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:452
-#: admin/class-woocommerce-category-banner-management-admin.php:544
-#: admin/class-woocommerce-category-banner-management-admin.php:635
+#: admin/class-woocommerce-category-banner-management-admin.php:462
+#: admin/class-woocommerce-category-banner-management-admin.php:560
+#: admin/class-woocommerce-category-banner-management-admin.php:657
+msgid "Same Banner For Child Brands"
+msgstr ""
+
+#: admin/class-woocommerce-category-banner-management-admin.php:464
+#: admin/class-woocommerce-category-banner-management-admin.php:562
+#: admin/class-woocommerce-category-banner-management-admin.php:659
 msgid "Same Banner For Child Categories"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:468
-#: admin/class-woocommerce-category-banner-management-admin.php:560
-#: admin/class-woocommerce-category-banner-management-admin.php:651
+#: admin/class-woocommerce-category-banner-management-admin.php:485
+#: admin/class-woocommerce-category-banner-management-admin.php:583
+#: admin/class-woocommerce-category-banner-management-admin.php:680
 #: admin/partials/wcbm-banner-settings-page.php:304
 #: admin/partials/wcbm-banner-settings-page.php:448
 #: admin/partials/wcbm-banner-settings-page.php:783
@@ -244,15 +255,15 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:1437
 #: admin/partials/wcbm-banner-settings-page.php:1835
 #: admin/partials/wcbm-banner-settings-page.php:2203
-#: includes/class-woocommerce-category-banner-management.php:345
-#: includes/class-woocommerce-category-banner-management.php:413
-#: includes/class-woocommerce-category-banner-management.php:482
+#: includes/class-woocommerce-category-banner-management.php:349
+#: includes/class-woocommerce-category-banner-management.php:417
+#: includes/class-woocommerce-category-banner-management.php:486
 msgid "Select Banner"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:472
-#: admin/class-woocommerce-category-banner-management-admin.php:564
-#: admin/class-woocommerce-category-banner-management-admin.php:655
+#: admin/class-woocommerce-category-banner-management-admin.php:489
+#: admin/class-woocommerce-category-banner-management-admin.php:587
+#: admin/class-woocommerce-category-banner-management-admin.php:684
 #: admin/partials/wcbm-banner-settings-page.php:308
 #: admin/partials/wcbm-banner-settings-page.php:353
 #: admin/partials/wcbm-banner-settings-page.php:454
@@ -267,15 +278,15 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:1898
 #: admin/partials/wcbm-banner-settings-page.php:2209
 #: admin/partials/wcbm-banner-settings-page.php:2267
-#: includes/class-woocommerce-category-banner-management.php:349
-#: includes/class-woocommerce-category-banner-management.php:417
-#: includes/class-woocommerce-category-banner-management.php:486
+#: includes/class-woocommerce-category-banner-management.php:353
+#: includes/class-woocommerce-category-banner-management.php:421
+#: includes/class-woocommerce-category-banner-management.php:490
 msgid "Single Banner"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:475
-#: admin/class-woocommerce-category-banner-management-admin.php:567
-#: admin/class-woocommerce-category-banner-management-admin.php:658
+#: admin/class-woocommerce-category-banner-management-admin.php:492
+#: admin/class-woocommerce-category-banner-management-admin.php:590
+#: admin/class-woocommerce-category-banner-management-admin.php:687
 #: admin/partials/wcbm-banner-settings-page.php:458
 #: admin/partials/wcbm-banner-settings-page.php:604
 #: admin/partials/wcbm-banner-settings-page.php:793
@@ -288,15 +299,15 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:1992
 #: admin/partials/wcbm-banner-settings-page.php:2213
 #: admin/partials/wcbm-banner-settings-page.php:2359
-#: includes/class-woocommerce-category-banner-management.php:352
-#: includes/class-woocommerce-category-banner-management.php:420
-#: includes/class-woocommerce-category-banner-management.php:489
+#: includes/class-woocommerce-category-banner-management.php:356
+#: includes/class-woocommerce-category-banner-management.php:424
+#: includes/class-woocommerce-category-banner-management.php:493
 msgid "Multiple Banner"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:482
-#: admin/class-woocommerce-category-banner-management-admin.php:574
-#: admin/class-woocommerce-category-banner-management-admin.php:665
+#: admin/class-woocommerce-category-banner-management-admin.php:499
+#: admin/class-woocommerce-category-banner-management-admin.php:597
+#: admin/class-woocommerce-category-banner-management-admin.php:694
 #: admin/partials/wcbm-banner-settings-page.php:315
 #: admin/partials/wcbm-banner-settings-page.php:465
 #: admin/partials/wcbm-banner-settings-page.php:799
@@ -304,27 +315,27 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:1454
 #: admin/partials/wcbm-banner-settings-page.php:1852
 #: admin/partials/wcbm-banner-settings-page.php:2220
-#: includes/class-woocommerce-category-banner-management.php:359
-#: includes/class-woocommerce-category-banner-management.php:427
-#: includes/class-woocommerce-category-banner-management.php:496
+#: includes/class-woocommerce-category-banner-management.php:363
+#: includes/class-woocommerce-category-banner-management.php:431
+#: includes/class-woocommerce-category-banner-management.php:500
 msgid "Start Date"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:485
-#: admin/class-woocommerce-category-banner-management-admin.php:577
-#: admin/class-woocommerce-category-banner-management-admin.php:668
+#: admin/class-woocommerce-category-banner-management-admin.php:502
+#: admin/class-woocommerce-category-banner-management-admin.php:600
+#: admin/class-woocommerce-category-banner-management-admin.php:697
 #: admin/partials/wcbm-banner-settings-page.php:1139
 #: admin/partials/wcbm-banner-settings-page.php:1457
 #: admin/partials/wcbm-banner-settings-page.php:1855
-#: includes/class-woocommerce-category-banner-management.php:362
-#: includes/class-woocommerce-category-banner-management.php:430
-#: includes/class-woocommerce-category-banner-management.php:499
+#: includes/class-woocommerce-category-banner-management.php:366
+#: includes/class-woocommerce-category-banner-management.php:434
+#: includes/class-woocommerce-category-banner-management.php:503
 msgid "select start date which date banner will display on website"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:499
-#: admin/class-woocommerce-category-banner-management-admin.php:590
-#: admin/class-woocommerce-category-banner-management-admin.php:681
+#: admin/class-woocommerce-category-banner-management-admin.php:516
+#: admin/class-woocommerce-category-banner-management-admin.php:613
+#: admin/class-woocommerce-category-banner-management-admin.php:710
 #: admin/partials/wcbm-banner-settings-page.php:328
 #: admin/partials/wcbm-banner-settings-page.php:480
 #: admin/partials/wcbm-banner-settings-page.php:813
@@ -332,26 +343,26 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:1468
 #: admin/partials/wcbm-banner-settings-page.php:1866
 #: admin/partials/wcbm-banner-settings-page.php:2235
-#: includes/class-woocommerce-category-banner-management.php:376
-#: includes/class-woocommerce-category-banner-management.php:444
-#: includes/class-woocommerce-category-banner-management.php:513
+#: includes/class-woocommerce-category-banner-management.php:380
+#: includes/class-woocommerce-category-banner-management.php:448
+#: includes/class-woocommerce-category-banner-management.php:517
 msgid "End Date"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:502
-#: admin/class-woocommerce-category-banner-management-admin.php:593
-#: admin/class-woocommerce-category-banner-management-admin.php:684
+#: admin/class-woocommerce-category-banner-management-admin.php:519
+#: admin/class-woocommerce-category-banner-management-admin.php:616
+#: admin/class-woocommerce-category-banner-management-admin.php:713
 #: admin/partials/wcbm-banner-settings-page.php:1471
 #: admin/partials/wcbm-banner-settings-page.php:1869
-#: includes/class-woocommerce-category-banner-management.php:379
-#: includes/class-woocommerce-category-banner-management.php:447
-#: includes/class-woocommerce-category-banner-management.php:516
+#: includes/class-woocommerce-category-banner-management.php:383
+#: includes/class-woocommerce-category-banner-management.php:451
+#: includes/class-woocommerce-category-banner-management.php:520
 msgid "select ending date which date banner will stop displaying on website"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:516
-#: admin/class-woocommerce-category-banner-management-admin.php:607
-#: admin/class-woocommerce-category-banner-management-admin.php:698
+#: admin/class-woocommerce-category-banner-management-admin.php:533
+#: admin/class-woocommerce-category-banner-management-admin.php:630
+#: admin/class-woocommerce-category-banner-management-admin.php:727
 #: admin/partials/wcbm-banner-settings-page.php:341
 #: admin/partials/wcbm-banner-settings-page.php:494
 #: admin/partials/wcbm-banner-settings-page.php:827
@@ -359,25 +370,25 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:1482
 #: admin/partials/wcbm-banner-settings-page.php:1880
 #: admin/partials/wcbm-banner-settings-page.php:2249
-#: includes/class-woocommerce-category-banner-management.php:393
-#: includes/class-woocommerce-category-banner-management.php:461
-#: includes/class-woocommerce-category-banner-management.php:530
+#: includes/class-woocommerce-category-banner-management.php:397
+#: includes/class-woocommerce-category-banner-management.php:465
+#: includes/class-woocommerce-category-banner-management.php:534
 msgid "Set banner in top?"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:519
-#: admin/class-woocommerce-category-banner-management-admin.php:610
-#: admin/class-woocommerce-category-banner-management-admin.php:701
+#: admin/class-woocommerce-category-banner-management-admin.php:536
+#: admin/class-woocommerce-category-banner-management-admin.php:633
+#: admin/class-woocommerce-category-banner-management-admin.php:730
 #: admin/partials/wcbm-banner-settings-page.php:344
 #: admin/partials/wcbm-banner-settings-page.php:497
 #: admin/partials/wcbm-banner-settings-page.php:2252
-#: includes/class-woocommerce-category-banner-management.php:396
-#: includes/class-woocommerce-category-banner-management.php:464
-#: includes/class-woocommerce-category-banner-management.php:533
+#: includes/class-woocommerce-category-banner-management.php:400
+#: includes/class-woocommerce-category-banner-management.php:468
+#: includes/class-woocommerce-category-banner-management.php:537
 msgid "If selected than page banner comes after header tag from top"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:719
+#: admin/class-woocommerce-category-banner-management-admin.php:748
 #: admin/partials/wcbm-banner-settings-page.php:525
 #: admin/partials/wcbm-banner-settings-page.php:655
 #: admin/partials/wcbm-banner-settings-page.php:858
@@ -390,12 +401,12 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:2047
 #: admin/partials/wcbm-banner-settings-page.php:2280
 #: admin/partials/wcbm-banner-settings-page.php:2408
-#: includes/class-woocommerce-category-banner-management.php:552
+#: includes/class-woocommerce-category-banner-management.php:556
 msgid "Banner Image"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:723
-#: admin/class-woocommerce-category-banner-management-admin.php:981
+#: admin/class-woocommerce-category-banner-management-admin.php:752
+#: admin/class-woocommerce-category-banner-management-admin.php:1018
 #: admin/partials/wcbm-banner-settings-page.php:659
 #: admin/partials/wcbm-banner-settings-page.php:863
 #: admin/partials/wcbm-banner-settings-page.php:996
@@ -406,13 +417,13 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:1917
 #: admin/partials/wcbm-banner-settings-page.php:2051
 #: admin/partials/wcbm-banner-settings-page.php:2412
-#: includes/class-woocommerce-category-banner-management.php:556
-#: includes/class-woocommerce-category-banner-management.php:845
+#: includes/class-woocommerce-category-banner-management.php:560
+#: includes/class-woocommerce-category-banner-management.php:849
 msgid "Select File"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:724
-#: admin/class-woocommerce-category-banner-management-admin.php:983
+#: admin/class-woocommerce-category-banner-management-admin.php:753
+#: admin/class-woocommerce-category-banner-management-admin.php:1020
 #: admin/partials/wcbm-banner-settings-page.php:530
 #: admin/partials/wcbm-banner-settings-page.php:864
 #: admin/partials/wcbm-banner-settings-page.php:997
@@ -423,13 +434,13 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:1918
 #: admin/partials/wcbm-banner-settings-page.php:2052
 #: admin/partials/wcbm-banner-settings-page.php:2285
-#: includes/class-woocommerce-category-banner-management.php:557
-#: includes/class-woocommerce-category-banner-management.php:847
+#: includes/class-woocommerce-category-banner-management.php:561
+#: includes/class-woocommerce-category-banner-management.php:851
 msgid "Include File"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:724
-#: admin/class-woocommerce-category-banner-management-admin.php:983
+#: admin/class-woocommerce-category-banner-management-admin.php:753
+#: admin/class-woocommerce-category-banner-management-admin.php:1020
 #: admin/partials/wcbm-banner-settings-page.php:530
 #: admin/partials/wcbm-banner-settings-page.php:660
 #: admin/partials/wcbm-banner-settings-page.php:864
@@ -442,206 +453,224 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:2052
 #: admin/partials/wcbm-banner-settings-page.php:2285
 #: admin/partials/wcbm-banner-settings-page.php:2413
-#: includes/class-woocommerce-category-banner-management.php:557
-#: includes/class-woocommerce-category-banner-management.php:847
+#: includes/class-woocommerce-category-banner-management.php:561
+#: includes/class-woocommerce-category-banner-management.php:851
 msgid "Upload File"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:726
+#: admin/class-woocommerce-category-banner-management-admin.php:755
 #: admin/partials/wcbm-banner-settings-page.php:532
 #: admin/partials/wcbm-banner-settings-page.php:866
 #: admin/partials/wcbm-banner-settings-page.php:1202
 #: admin/partials/wcbm-banner-settings-page.php:1522
 #: admin/partials/wcbm-banner-settings-page.php:1920
 #: admin/partials/wcbm-banner-settings-page.php:2287
-#: includes/class-woocommerce-category-banner-management.php:559
+#: includes/class-woocommerce-category-banner-management.php:563
 msgid "Remove File"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:747
-#: includes/class-woocommerce-category-banner-management.php:580
+#: admin/class-woocommerce-category-banner-management-admin.php:776
+#: includes/class-woocommerce-category-banner-management.php:584
 msgid "Banner image link"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:754
+#: admin/class-woocommerce-category-banner-management-admin.php:783
 #: admin/partials/wcbm-banner-settings-page.php:558
 #: admin/partials/wcbm-banner-settings-page.php:892
 #: admin/partials/wcbm-banner-settings-page.php:1228
 #: admin/partials/wcbm-banner-settings-page.php:1548
 #: admin/partials/wcbm-banner-settings-page.php:1946
 #: admin/partials/wcbm-banner-settings-page.php:2313
-#: includes/class-woocommerce-category-banner-management.php:587
+#: includes/class-woocommerce-category-banner-management.php:591
 msgid "Where users will be directed if they click on the banner."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:759
+#: admin/class-woocommerce-category-banner-management-admin.php:788
 #: admin/partials/wcbm-banner-settings-page.php:564
 #: admin/partials/wcbm-banner-settings-page.php:898
 #: admin/partials/wcbm-banner-settings-page.php:1234
 #: admin/partials/wcbm-banner-settings-page.php:1554
 #: admin/partials/wcbm-banner-settings-page.php:1952
 #: admin/partials/wcbm-banner-settings-page.php:2319
-#: includes/class-woocommerce-category-banner-management.php:592
+#: includes/class-woocommerce-category-banner-management.php:596
 msgid "Select Link Target"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:764
+#: admin/class-woocommerce-category-banner-management-admin.php:793
 #: admin/partials/wcbm-banner-settings-page.php:570
 #: admin/partials/wcbm-banner-settings-page.php:904
 #: admin/partials/wcbm-banner-settings-page.php:1240
 #: admin/partials/wcbm-banner-settings-page.php:1560
 #: admin/partials/wcbm-banner-settings-page.php:1958
 #: admin/partials/wcbm-banner-settings-page.php:2325
-#: includes/class-woocommerce-category-banner-management.php:597
+#: includes/class-woocommerce-category-banner-management.php:601
 msgid "Self window"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:768
+#: admin/class-woocommerce-category-banner-management-admin.php:797
 #: admin/partials/wcbm-banner-settings-page.php:574
 #: admin/partials/wcbm-banner-settings-page.php:908
 #: admin/partials/wcbm-banner-settings-page.php:1244
 #: admin/partials/wcbm-banner-settings-page.php:1564
 #: admin/partials/wcbm-banner-settings-page.php:1962
 #: admin/partials/wcbm-banner-settings-page.php:2329
-#: includes/class-woocommerce-category-banner-management.php:601
+#: includes/class-woocommerce-category-banner-management.php:605
 msgid "New window"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:775
+#: admin/class-woocommerce-category-banner-management-admin.php:804
 #: admin/partials/wcbm-banner-settings-page.php:581
 #: admin/partials/wcbm-banner-settings-page.php:915
 #: admin/partials/wcbm-banner-settings-page.php:1251
 #: admin/partials/wcbm-banner-settings-page.php:1571
 #: admin/partials/wcbm-banner-settings-page.php:1969
 #: admin/partials/wcbm-banner-settings-page.php:2336
-#: includes/class-woocommerce-category-banner-management.php:608
+#: includes/class-woocommerce-category-banner-management.php:612
 msgid "Select Link Relation"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:780
+#: admin/class-woocommerce-category-banner-management-admin.php:809
 #: admin/partials/wcbm-banner-settings-page.php:587
 #: admin/partials/wcbm-banner-settings-page.php:921
 #: admin/partials/wcbm-banner-settings-page.php:1257
 #: admin/partials/wcbm-banner-settings-page.php:1577
 #: admin/partials/wcbm-banner-settings-page.php:1975
 #: admin/partials/wcbm-banner-settings-page.php:2342
-#: includes/class-woocommerce-category-banner-management.php:613
+#: includes/class-woocommerce-category-banner-management.php:617
 msgid "Follow"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:784
+#: admin/class-woocommerce-category-banner-management-admin.php:813
 #: admin/partials/wcbm-banner-settings-page.php:591
 #: admin/partials/wcbm-banner-settings-page.php:925
 #: admin/partials/wcbm-banner-settings-page.php:1261
 #: admin/partials/wcbm-banner-settings-page.php:1581
 #: admin/partials/wcbm-banner-settings-page.php:1979
 #: admin/partials/wcbm-banner-settings-page.php:2346
-#: includes/class-woocommerce-category-banner-management.php:617
+#: includes/class-woocommerce-category-banner-management.php:621
 msgid "No follow"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:792
+#: admin/class-woocommerce-category-banner-management-admin.php:821
 #: admin/partials/wcbm-banner-settings-page.php:1728
-#: includes/class-woocommerce-category-banner-management.php:625
+#: includes/class-woocommerce-category-banner-management.php:629
 msgid "Select Banner Size"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:796
+#: admin/class-woocommerce-category-banner-management-admin.php:825
 #: admin/partials/wcbm-banner-settings-page.php:1737
-#: includes/class-woocommerce-category-banner-management.php:629
+#: includes/class-woocommerce-category-banner-management.php:633
 msgid "-- Select Banner Size --"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:799
+#: admin/class-woocommerce-category-banner-management-admin.php:828
 #: admin/partials/wcbm-banner-settings-page.php:1741
-#: includes/class-woocommerce-category-banner-management.php:632
+#: includes/class-woocommerce-category-banner-management.php:636
 msgid "25%"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:802
+#: admin/class-woocommerce-category-banner-management-admin.php:831
 #: admin/partials/wcbm-banner-settings-page.php:1745
-#: includes/class-woocommerce-category-banner-management.php:635
+#: includes/class-woocommerce-category-banner-management.php:639
 msgid "50%"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:805
+#: admin/class-woocommerce-category-banner-management-admin.php:834
 #: admin/partials/wcbm-banner-settings-page.php:1749
-#: includes/class-woocommerce-category-banner-management.php:638
+#: includes/class-woocommerce-category-banner-management.php:642
 msgid "75%"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:808
+#: admin/class-woocommerce-category-banner-management-admin.php:837
 #: admin/partials/wcbm-banner-settings-page.php:1753
-#: includes/class-woocommerce-category-banner-management.php:641
+#: includes/class-woocommerce-category-banner-management.php:645
 msgid "100%"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:811
+#: admin/class-woocommerce-category-banner-management-admin.php:840
 #: admin/partials/wcbm-banner-settings-page.php:1757
-#: includes/class-woocommerce-category-banner-management.php:644
+#: includes/class-woocommerce-category-banner-management.php:648
 msgid "Fixed to container(1080px)"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:820
+#: admin/class-woocommerce-category-banner-management-admin.php:849
+msgid "Show brand default title?"
+msgstr ""
+
+#: admin/class-woocommerce-category-banner-management-admin.php:852
+msgid ""
+"If selected then it will show the default brand title on banner with center "
+"position."
+msgstr ""
+
+#: admin/class-woocommerce-category-banner-management-admin.php:856
 msgid "Show category default title?"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:823
+#: admin/class-woocommerce-category-banner-management-admin.php:859
 msgid ""
 "If selected then it will show the default category title on banner with "
 "center position."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:838
+#: admin/class-woocommerce-category-banner-management-admin.php:875
+msgid "Select Brand title color"
+msgstr ""
+
+#: admin/class-woocommerce-category-banner-management-admin.php:875
 msgid "Select Category title color"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:849
+#: admin/class-woocommerce-category-banner-management-admin.php:886
+msgid "Select Brand title size."
+msgstr ""
+
+#: admin/class-woocommerce-category-banner-management-admin.php:886
 msgid "Select Category title size."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:852
-#: includes/class-woocommerce-category-banner-management.php:717
+#: admin/class-woocommerce-category-banner-management-admin.php:889
+#: includes/class-woocommerce-category-banner-management.php:721
 msgid "Configure the font size of default banner title."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:866
-#: includes/class-woocommerce-category-banner-management.php:731
+#: admin/class-woocommerce-category-banner-management-admin.php:903
+#: includes/class-woocommerce-category-banner-management.php:735
 msgid "Button Text"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:878
-#: includes/class-woocommerce-category-banner-management.php:743
+#: admin/class-woocommerce-category-banner-management-admin.php:915
+#: includes/class-woocommerce-category-banner-management.php:747
 msgid "Button Link"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:889
-#: includes/class-woocommerce-category-banner-management.php:754
+#: admin/class-woocommerce-category-banner-management-admin.php:926
+#: includes/class-woocommerce-category-banner-management.php:758
 msgid "Select button text color"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:900
-#: includes/class-woocommerce-category-banner-management.php:765
+#: admin/class-woocommerce-category-banner-management-admin.php:937
+#: includes/class-woocommerce-category-banner-management.php:769
 msgid "Select button background color"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:912
-#: includes/class-woocommerce-category-banner-management.php:777
+#: admin/class-woocommerce-category-banner-management-admin.php:949
+#: includes/class-woocommerce-category-banner-management.php:781
 msgid "Button Description"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:925
+#: admin/class-woocommerce-category-banner-management-admin.php:962
 #: admin/partials/wcbm-banner-settings-page.php:609
 #: admin/partials/wcbm-banner-settings-page.php:945
 #: admin/partials/wcbm-banner-settings-page.php:1280
 #: admin/partials/wcbm-banner-settings-page.php:1600
 #: admin/partials/wcbm-banner-settings-page.php:1998
 #: admin/partials/wcbm-banner-settings-page.php:2364
-#: includes/class-woocommerce-category-banner-management.php:789
+#: includes/class-woocommerce-category-banner-management.php:793
 msgid "Banner Type"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:932
+#: admin/class-woocommerce-category-banner-management-admin.php:969
 #: admin/partials/wcbm-banner-settings-page.php:616
 #: admin/partials/wcbm-banner-settings-page.php:953
 #: admin/partials/wcbm-banner-settings-page.php:1289
@@ -650,11 +679,11 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:2371
 #: admin/partials/wcbm-product-sliders-form.php:426
 #: admin/partials/wcbm-product-sliders-form.php:729
-#: includes/class-woocommerce-category-banner-management.php:796
+#: includes/class-woocommerce-category-banner-management.php:800
 msgid "Random"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:936
+#: admin/class-woocommerce-category-banner-management-admin.php:973
 #: admin/partials/wcbm-banner-settings-page.php:620
 #: admin/partials/wcbm-banner-settings-page.php:958
 #: admin/partials/wcbm-banner-settings-page.php:1295
@@ -666,71 +695,71 @@ msgstr ""
 #: admin/partials/wcbm-category-sliders-form.php:224
 #: admin/partials/wcbm-category-sliders-form.php:609
 #: admin/partials/wcbm-category-sliders-form.php:645
-#: includes/class-woocommerce-category-banner-management.php:800
+#: includes/class-woocommerce-category-banner-management.php:804
 msgid "Slider"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:943
+#: admin/class-woocommerce-category-banner-management-admin.php:980
 #: admin/partials/wcbm-banner-settings-page.php:627
 #: admin/partials/wcbm-banner-settings-page.php:965
 #: admin/partials/wcbm-banner-settings-page.php:1302
 #: admin/partials/wcbm-banner-settings-page.php:1622
 #: admin/partials/wcbm-banner-settings-page.php:2019
 #: admin/partials/wcbm-banner-settings-page.php:2382
-#: includes/class-woocommerce-category-banner-management.php:807
+#: includes/class-woocommerce-category-banner-management.php:811
 msgid "Display Navigation"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:955
+#: admin/class-woocommerce-category-banner-management-admin.php:992
 #: admin/partials/wcbm-banner-settings-page.php:638
 #: admin/partials/wcbm-banner-settings-page.php:975
 #: admin/partials/wcbm-banner-settings-page.php:1312
 #: admin/partials/wcbm-banner-settings-page.php:1632
 #: admin/partials/wcbm-banner-settings-page.php:2030
 #: admin/partials/wcbm-banner-settings-page.php:2392
-#: includes/class-woocommerce-category-banner-management.php:819
+#: includes/class-woocommerce-category-banner-management.php:823
 msgid "Select slider arrow color"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:965
+#: admin/class-woocommerce-category-banner-management-admin.php:1002
 #: admin/partials/wcbm-banner-settings-page.php:647
 #: admin/partials/wcbm-banner-settings-page.php:984
 #: admin/partials/wcbm-banner-settings-page.php:1321
 #: admin/partials/wcbm-banner-settings-page.php:1641
 #: admin/partials/wcbm-banner-settings-page.php:2039
 #: admin/partials/wcbm-banner-settings-page.php:2400
-#: includes/class-woocommerce-category-banner-management.php:829
+#: includes/class-woocommerce-category-banner-management.php:833
 msgid "Select slider arrow background color"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:976
-#: includes/class-woocommerce-category-banner-management.php:840
+#: admin/class-woocommerce-category-banner-management-admin.php:1013
+#: includes/class-woocommerce-category-banner-management.php:844
 msgid "Banner Images"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:984
+#: admin/class-woocommerce-category-banner-management-admin.php:1021
 #: admin/partials/wcbm-banner-settings-page.php:662
 #: admin/partials/wcbm-banner-settings-page.php:999
 #: admin/partials/wcbm-banner-settings-page.php:1336
 #: admin/partials/wcbm-banner-settings-page.php:1656
 #: admin/partials/wcbm-banner-settings-page.php:2054
 #: admin/partials/wcbm-banner-settings-page.php:2415
-#: includes/class-woocommerce-category-banner-management.php:848
+#: includes/class-woocommerce-category-banner-management.php:852
 msgid "Remove All"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:986
+#: admin/class-woocommerce-category-banner-management-admin.php:1023
 #: admin/partials/wcbm-banner-settings-page.php:664
 #: admin/partials/wcbm-banner-settings-page.php:1001
 #: admin/partials/wcbm-banner-settings-page.php:1338
 #: admin/partials/wcbm-banner-settings-page.php:1658
 #: admin/partials/wcbm-banner-settings-page.php:2056
 #: admin/partials/wcbm-banner-settings-page.php:2417
-#: includes/class-woocommerce-category-banner-management.php:850
+#: includes/class-woocommerce-category-banner-management.php:854
 msgid "Users can add multiple images. Image size should be 960 * 360."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:1009
+#: admin/class-woocommerce-category-banner-management-admin.php:1046
 #: admin/partials/wcbm-banner-settings-page.php:685
 #: admin/partials/wcbm-banner-settings-page.php:888
 #: admin/partials/wcbm-banner-settings-page.php:1024
@@ -741,12 +770,12 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:1942
 #: admin/partials/wcbm-banner-settings-page.php:2079
 #: admin/partials/wcbm-banner-settings-page.php:2438
-#: includes/class-woocommerce-category-banner-management.php:873
+#: includes/class-woocommerce-category-banner-management.php:877
 msgid "Example: https://multidots.com"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:1013
-#: admin/class-woocommerce-category-banner-management-admin.php:1015
+#: admin/class-woocommerce-category-banner-management-admin.php:1050
+#: admin/class-woocommerce-category-banner-management-admin.php:1052
 #: admin/list-tables/class-wbm-category-slider-table.php:225
 #: admin/list-tables/class-wbm-category-slider-table.php:279
 #: admin/list-tables/class-wbm-product-slider-table.php:225
@@ -763,74 +792,74 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:2085
 #: admin/partials/wcbm-banner-settings-page.php:2444
 #: admin/partials/wcbm-banner-settings-page.php:2446
-#: includes/class-woocommerce-category-banner-management.php:877
-#: includes/class-woocommerce-category-banner-management.php:879
+#: includes/class-woocommerce-category-banner-management.php:881
+#: includes/class-woocommerce-category-banner-management.php:883
 msgid "Delete"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:2051
+#: admin/class-woocommerce-category-banner-management-admin.php:2092
 msgid "Slider rule created."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:2053
+#: admin/class-woocommerce-category-banner-management-admin.php:2094
 msgid "Slider rule updated."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:2055
+#: admin/class-woocommerce-category-banner-management-admin.php:2096
 msgid "Slider rule deleted."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:2057
+#: admin/class-woocommerce-category-banner-management-admin.php:2098
 msgid "Slider rule duplicated."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:2059
+#: admin/class-woocommerce-category-banner-management-admin.php:2100
 msgid "Slider rule disabled."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:2061
+#: admin/class-woocommerce-category-banner-management-admin.php:2102
 msgid "Slider rule enabled."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:2064
+#: admin/class-woocommerce-category-banner-management-admin.php:2105
 msgid "There was an error with saving data."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:2066
-#: admin/class-woocommerce-category-banner-management-admin.php:2076
+#: admin/class-woocommerce-category-banner-management-admin.php:2107
+#: admin/class-woocommerce-category-banner-management-admin.php:2117
 msgid "There was an error with security check."
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:2073
+#: admin/class-woocommerce-category-banner-management-admin.php:2114
 msgid "Settings saved successfully"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:3120
-#: admin/class-woocommerce-category-banner-management-admin.php:3611
+#: admin/class-woocommerce-category-banner-management-admin.php:3165
+#: admin/class-woocommerce-category-banner-management-admin.php:3660
 msgid "Please enable the slider's status.!!"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:3582
+#: admin/class-woocommerce-category-banner-management-admin.php:3631
 #: public/partials/wcbm-banner-public-shortcodes.php:1656
 msgid "Sale!"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:3591
+#: admin/class-woocommerce-category-banner-management-admin.php:3640
 #: public/partials/wcbm-banner-public-shortcodes.php:1665
 msgid "Read more"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:3593
+#: admin/class-woocommerce-category-banner-management-admin.php:3642
 #: public/partials/wcbm-banner-public-shortcodes.php:1669
 msgid "Select options"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:3595
+#: admin/class-woocommerce-category-banner-management-admin.php:3644
 #: public/partials/wcbm-banner-public-shortcodes.php:1673
 msgid "Add to cart"
 msgstr ""
 
-#: admin/class-woocommerce-category-banner-management-admin.php:3598
+#: admin/class-woocommerce-category-banner-management-admin.php:3647
 #: public/partials/wcbm-banner-public-shortcodes.php:1677
 msgid "View products"
 msgstr ""
@@ -1412,7 +1441,7 @@ msgid "Upgrade Now"
 msgstr ""
 
 #: admin/partials/header/plugin-header.php:45
-#: includes/class-woocommerce-category-banner-management.php:1054
+#: includes/class-woocommerce-category-banner-management.php:1057
 msgid "Support"
 msgstr ""
 
@@ -1433,7 +1462,7 @@ msgid "Manage Slider"
 msgstr ""
 
 #: admin/partials/header/plugin-header.php:136
-#: includes/class-woocommerce-category-banner-management.php:1052
+#: includes/class-woocommerce-category-banner-management.php:1055
 msgid "Settings"
 msgstr ""
 
@@ -1642,6 +1671,7 @@ msgstr ""
 #: admin/partials/wcbm-banner-settings-page.php:2528
 #: admin/partials/wcbm-banner-settings-page.php:2562
 #: admin/partials/wcbm-banner-settings-page.php:2596
+#: admin/partials/wcbm-banner-settings-page.php:2630
 msgid "click here"
 msgstr ""
 
@@ -1697,6 +1727,24 @@ msgstr ""
 
 #: admin/partials/wcbm-banner-settings-page.php:2594
 msgid "Go to Tag page"
+msgstr ""
+
+#: admin/partials/wcbm-banner-settings-page.php:2601
+msgid "Brand specific banner settings"
+msgstr ""
+
+#: admin/partials/wcbm-banner-settings-page.php:2605
+msgid ""
+"You can upload custom banner at the top of your product brand pages. Easily "
+"update the image through your product brand edit page."
+msgstr ""
+
+#: admin/partials/wcbm-banner-settings-page.php:2608
+msgid " to preview product brand page banner settings."
+msgstr ""
+
+#: admin/partials/wcbm-banner-settings-page.php:2628
+msgid "Go to Brand page"
 msgstr ""
 
 #: admin/partials/wcbm-category-sliders-form.php:59
@@ -3796,51 +3844,51 @@ msgstr ""
 msgid "All Product Sliders"
 msgstr ""
 
-#: includes/class-woocommerce-category-banner-management.php:659
+#: includes/class-woocommerce-category-banner-management.php:663
 msgid "Show product Name in the Banner"
 msgstr ""
 
-#: includes/class-woocommerce-category-banner-management.php:662
+#: includes/class-woocommerce-category-banner-management.php:666
 msgid ""
 "If selected then it will show the default product title on banner with "
 "center position."
 msgstr ""
 
-#: includes/class-woocommerce-category-banner-management.php:667
+#: includes/class-woocommerce-category-banner-management.php:671
 msgid "Show Page Name in the Banner"
 msgstr ""
 
-#: includes/class-woocommerce-category-banner-management.php:670
+#: includes/class-woocommerce-category-banner-management.php:674
 msgid ""
 "If selected then it will show the default page title on banner with center "
 "position."
 msgstr ""
 
-#: includes/class-woocommerce-category-banner-management.php:690
+#: includes/class-woocommerce-category-banner-management.php:694
 msgid "Select Product title color"
 msgstr ""
 
-#: includes/class-woocommerce-category-banner-management.php:692
+#: includes/class-woocommerce-category-banner-management.php:696
 msgid "Select Page title color"
 msgstr ""
 
-#: includes/class-woocommerce-category-banner-management.php:709
+#: includes/class-woocommerce-category-banner-management.php:713
 msgid "Select Product title size."
 msgstr ""
 
-#: includes/class-woocommerce-category-banner-management.php:711
+#: includes/class-woocommerce-category-banner-management.php:715
 msgid "Select Page title size."
 msgstr ""
 
-#: includes/class-woocommerce-category-banner-management.php:902
+#: includes/class-woocommerce-category-banner-management.php:906
 msgid "Product Banner Settings"
 msgstr ""
 
-#: includes/class-woocommerce-category-banner-management.php:940
+#: includes/class-woocommerce-category-banner-management.php:944
 msgid "Page Banner Settings"
 msgstr ""
 
-#: includes/class-woocommerce-category-banner-management.php:1053
+#: includes/class-woocommerce-category-banner-management.php:1056
 msgid "Docs"
 msgstr ""
 

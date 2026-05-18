@@ -466,7 +466,7 @@ if ( !class_exists( 'WCBM_banners_display_methods' ) ) {
          *
          */
         public function wcbm_display_category_banner_html() {
-            if ( is_product_category() || is_product_tag() ) {
+            if ( is_product_category() || is_product_tag() || is_tax( 'product_brand' ) ) {
                 $category = get_queried_object();
                 $cat_id = $category->term_id;
                 $heading_text = $category->name;
@@ -474,8 +474,13 @@ if ( !class_exists( 'WCBM_banners_display_methods' ) ) {
                 if ( isset( $chk_term_options['auto_display_banner'] ) && !empty( $chk_term_options['auto_display_banner'] ) && 'on' === $chk_term_options['auto_display_banner'] ) {
                     $cat_id = $cat_id;
                 } else {
-                    $category = get_term( $cat_id, 'product_cat' );
-                    $banner_category_id = ( function_exists( 'get_banner_for_category' ) ? get_banner_for_category( $cat_id ) : '' );
+                    $current_tax = $category->taxonomy;
+                    if ( 'product_brand' === $current_tax ) {
+                        $banner_category_id = ( function_exists( 'get_banner_for_brand' ) ? get_banner_for_brand( $cat_id ) : '' );
+                    } else {
+                        $category = get_term( $cat_id, 'product_cat' );
+                        $banner_category_id = ( function_exists( 'get_banner_for_category' ) ? get_banner_for_category( $cat_id ) : '' );
+                    }
                     if ( $banner_category_id !== false ) {
                         $cat_id = $banner_category_id;
                     }

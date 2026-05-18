@@ -1,11 +1,11 @@
-== Banner Management, Product Slider, Product Carousel for WooCommerce ==
+== Banner Management For WooCommerce ==
 Contributors: dots
 Tags: product slider, carousel slider, woocommerce slider, product category slider, shop banner
 Donate link: https://www.thedotstore.com/
-Stable tag: 2.5.1
+Stable tag: 2.5.2
 Requires at least: 5.0
-Tested up to: 6.7.2
-WC tested up to: 9.7.1
+Tested up to: 6.9.4
+WC tested up to: 10.7.0
 Requires PHP: 7.2
 Copyright: (c) 2015-2019 Thedotstore all rights reserved (support@thedotstore.com)
 License: GPLv3 or later
@@ -103,12 +103,6 @@ Need even more features? upgrade the premium plugin version to get all the advan
 <li><strong>Free plugin:</strong> Need Technical Help? - <a href="https://wordpress.org/support/plugin/banner-management-for-woocommerce/">Click here</a></li>
 <li><strong>Pro Plugin:</strong> PRE-SALE Query – <a href="https://www.thedotstore.com/support/">Click here</a> or <a href="https://docs.thedotstore.com/collection/252-banner-management">Review Help Document</a></li>
 
-== 🎯 Supercharge Your Store Performance ==
-
-Gain access to <strong>50 expert tips</strong> covering everything from <strong>site speed</strong> and <strong>user experience</strong> to advanced sales strategies, each with impact scores to help you prioritize what truly drives results.
-
-<a href ="https://www.thedotstore.com/?popup_id=76452&utm_source=freeplugin&utm_medium=content&utm_id=ebook1_woo_banner" target="_blank">Download Free eBook</a>
-
 == EXPLORE OUR OTHER PLUGINS TO SUPERCHARGE YOUR WEBSITE: ==
 
 == 👉 Premium WooCommerce Plugins list ==
@@ -172,6 +166,15 @@ Add this css on your themes style or any css: <strong>.wbm_banner_image { order:
 
 
 == Changelog ==
+= 2.5.2 =
+* [New] Added support to assign banners to the new WooCommerce Brand pages.
+* [Bug Fix] Fixed an issue where an unclosed div was hiding product details.
+* [Bug Fix] Fixed a JavaScript error issue.
+* [Bug Fix] Fixed an issue where the product banner “Open in New Tab” target option was not working properly.
+* [Enhancement] Security improvement enhancements.
+* [Enhancement] Compatible with WooCommerce 10.7.x
+* [Enhancement] Compatible with WordPress 6.9.x
+
 = 2.5.1 =
 * [Enhancement] Added image alt attribute
 * [Enhancement] Made plugin compatible with Astra theme

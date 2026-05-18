@@ -63,7 +63,7 @@ class woocommerce_category_banner_management_Public {
     public function wcbm_enqueue_styles_scripts() {
         $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min' );
         $banner_data = array();
-        if ( function_exists( 'is_product' ) && is_product() || function_exists( 'is_product_category' ) && is_product_category() || function_exists( 'is_product_tag' ) && is_product_tag() || function_exists( 'is_shop' ) && is_shop() || function_exists( 'is_cart' ) && is_cart() || function_exists( 'is_checkout' ) && is_checkout() || function_exists( 'is_page' ) && is_page() ) {
+        if ( function_exists( 'is_product' ) && is_product() || function_exists( 'is_product_category' ) && is_product_category() || function_exists( 'is_product_tag' ) && is_product_tag() || function_exists( 'is_shop' ) && is_shop() || function_exists( 'is_cart' ) && is_cart() || function_exists( 'is_checkout' ) && is_checkout() || function_exists( 'is_page' ) && is_page() || is_tax( 'product_brand' ) ) {
             //enqueue stylesheets.
             wp_enqueue_style(
                 'jquery-bxslider-css',

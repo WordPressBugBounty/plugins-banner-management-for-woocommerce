@@ -196,6 +196,21 @@ class woocommerce_category_banner_management {
             10,
             2
         );
+        //edit product brand
+        $this->loader->add_action(
+            'product_brand_edit_form_fields',
+            $plugin_admin,
+            'wcbm_product_cat_taxonomy_custom_fields',
+            10,
+            2
+        );
+        $this->loader->add_action(
+            'edited_product_brand',
+            $plugin_admin,
+            'wcbm_product_cat_save_taxonomy_custom_fields',
+            10,
+            2
+        );
         $this->loader->add_action( 'admin_head', $plugin_admin, 'wcbm_dot_store_icon_css' );
         $this->loader->add_action( 'admin_head', $plugin_admin, 'wcbm_active_plugin_main_menu' );
         $this->loader->add_action( 'admin_init', $plugin_admin, 'wcbm_send_wizard_data_after_plugin_activation' );
@@ -894,7 +909,6 @@ class woocommerce_category_banner_management {
             );
         }
         $this->loader->add_action( 'wp_ajax_wbm_save_shop_page_banner_data', $plugin_admin, 'wcbm_save_shop_page_banner_data' );
-        $this->loader->add_action( 'wp_ajax_nopriv_wbm_save_shop_page_banner_data', $plugin_admin, 'wcbm_save_shop_page_banner_data' );
         $this->loader->add_action( 'wp_ajax_wcbm_show_category_slider_settings_preview', $plugin_admin, 'wcbm_show_category_slider_settings_preview' );
         $this->loader->add_action( 'wp_ajax_wcbm_show_product_slider_settings_preview', $plugin_admin, 'wcbm_show_product_slider_settings_preview' );
         $product_page_banner_filter = apply_filters( 'product_page_banner_filter', 'woocommerce_before_single_product' );

@@ -13,10 +13,10 @@
  * @package           Woo_Banner_Management
  *
  * @wordpress-plugin
- * Plugin Name: Banner Management, Product Slider, Product Carousel for WooCommerce
+ * Plugin Name: Banner Management For WooCommerce
  * Plugin URI:        https://www.thedotstore.com/woocommerce-category-banner-management/
  * Description:       With this plugin, You can easily add banner in WooCommerce stores and you can upload the banner  specific for page,category  and welcome page.
- * Version:           2.5.1
+ * Version:           2.5.2
  * Author:            theDotstore
  * Author URI:        https://www.thedotstore.com/
  * License:           GPL-2.0+
@@ -25,8 +25,8 @@
  * Domain Path:       /languages
  * Requires Plugins:  woocommerce
  * 
- * WP tested up to:   6.7.2
- * WC tested up to:   9.7.1
+ * WP tested up to:   6.9.4
+ * WC tested up to:   10.7.0
  * Requires PHP:      7.2
  * Requires at least: 5.0
  */
@@ -51,25 +51,26 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
                 // Include Freemius SDK.
                 require_once dirname( __FILE__ ) . '/freemius/start.php';
                 $wcbm_fs = fs_dynamic_init( array(
-                    'id'              => '3494',
-                    'slug'            => 'woocommerce-category-banner-management',
-                    'type'            => 'plugin',
-                    'public_key'      => 'pk_7b4f220ab6fb1f1b92d91f6f7f7b9',
-                    'is_premium'      => false,
-                    'has_addons'      => false,
-                    'has_paid_plans'  => true,
-                    'trial'           => array(
+                    'id'               => '3494',
+                    'slug'             => 'woocommerce-category-banner-management',
+                    'type'             => 'plugin',
+                    'public_key'       => 'pk_7b4f220ab6fb1f1b92d91f6f7f7b9',
+                    'is_premium'       => false,
+                    'has_addons'       => false,
+                    'has_paid_plans'   => true,
+                    'trial'            => array(
                         'days'               => 14,
                         'is_require_payment' => true,
                     ),
-                    'has_affiliation' => 'selected',
-                    'menu'            => array(
+                    'has_affiliation'  => 'selected',
+                    'menu'             => array(
                         'slug'       => 'wcbm-banner-setting',
                         'first-path' => 'admin.php?page=wcbm-banner-setting',
                         'contact'    => false,
                         'support'    => false,
                     ),
-                    'is_live'         => true,
+                    'is_live'          => true,
+                    'is_org_compliant' => true,
                 ) );
             }
             return $wcbm_fs;
@@ -84,7 +85,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
         wcbm_fs()->add_action( 'after_uninstall', 'wcbm_fs_uninstall_cleanup' );
     }
     if ( !defined( 'WCBM_PLUGIN_VERSION' ) ) {
-        define( 'WCBM_PLUGIN_VERSION', '2.5.1' );
+        define( 'WCBM_PLUGIN_VERSION', '2.5.2' );
     }
     if ( !defined( 'WCBM_STORE_URL' ) ) {
         define( 'WCBM_STORE_URL', 'https://www.thedotstore.com/' );

@@ -367,6 +367,7 @@ class woocommerce_category_banner_management_Admin {
             require_once WCBM_PLUGIN_BASE_DIR . 'admin/partials/dots-upgrade-popup.php';
         }
         $t_id = $tag->term_id;
+        $current_taxonomy = $tag->taxonomy;
         $term_meta = ( function_exists( 'wcbm_get_category_banner_data' ) ? wcbm_get_category_banner_data( $t_id ) : '' );
         if ( isset( $term_meta['banner_url_id'] ) && '' !== $term_meta['banner_url_id'] ) {
             $banner_url = $term_meta['banner_url_id'];
@@ -461,6 +462,12 @@ class woocommerce_category_banner_management_Admin {
             esc_html_e( 'Tag Based Banner Settings', 'banner-management-for-woocommerce' );
             ?></h2>
 				<?php 
+        } elseif ( $tag->taxonomy === 'product_brand' ) {
+            ?>
+					<h2><?php 
+            esc_html_e( 'Brand Based Banner Settings', 'banner-management-for-woocommerce' );
+            ?></h2>
+				<?php 
         }
         ?>
 			</th>
@@ -481,35 +488,47 @@ class woocommerce_category_banner_management_Admin {
 					<label class="auto_display_banner_label" for="auto_display_banner"><em></em></label>
 				</fieldset>
 			</td>
-			<td><?php 
+			<td>
+                <?php 
         if ( $auto_display_banner ) {
+            ?>
+                    <?php 
             esc_html_e( 'Preview', 'banner-management-for-woocommerce' );
             ?>:
-				<a href="<?php 
-            echo esc_url( get_category_link( $t_id ) );
-            ?>"
-					target="_blank"><?php 
-            esc_html_e( 'Click here', 'banner-management-for-woocommerce' );
-            ?></a><?php 
+                    <?php 
+            $wcbm_preview_term_link = get_term_link( (int) $t_id, $current_taxonomy );
+            if ( !is_wp_error( $wcbm_preview_term_link ) ) {
+                ?>
+                                <a href="<?php 
+                echo esc_url( $wcbm_preview_term_link );
+                ?>" target="_blank"><?php 
+                esc_html_e( 'Click here', 'banner-management-for-woocommerce' );
+                ?></a><?php 
+            }
         }
         ?>
 			</td>
 		</tr>
 		<?php 
-        if ( taxonomy_exists( 'product_cat' ) && term_exists( $t_id, 'product_cat' ) ) {
+        if ( taxonomy_exists( $current_taxonomy ) && term_exists( $t_id, $current_taxonomy ) ) {
             //phpcs:ignore
             $child_categories = get_terms( array(
-                'taxonomy'   => 'product_cat',
+                'taxonomy'   => $current_taxonomy,
                 'parent'     => $t_id,
                 'hide_empty' => false,
             ) );
-            // Check if the category has a parent
+            // Check if the term has children
             if ( !empty( $child_categories ) ) {
+                if ( 'product_brand' === $current_taxonomy ) {
+                    $same_banner_label_else = esc_html__( 'Same Banner For Child Brands', 'banner-management-for-woocommerce' );
+                } else {
+                    $same_banner_label_else = esc_html__( 'Same Banner For Child Categories', 'banner-management-for-woocommerce' );
+                }
                 ?>
 					<tr class="form-field same_banner_for_child">
 						<th scope="row" valign="top">
 							<label for="same_banner_for_child"><?php 
-                esc_html_e( 'Same Banner For Child Categories', 'banner-management-for-woocommerce' );
+                echo esc_html( $same_banner_label_else );
                 ?><div class="wcbm-pro-label"></div></label>
 						</th>
 						<td class="auto_display">
@@ -789,17 +808,35 @@ class woocommerce_category_banner_management_Admin {
         echo ( '' === $cat_page_select_image || isset( $cat_page_select_image ) && 'cat-single-image' === $cat_page_select_image ? 'block' : 'hide_me' );
         ?>">
 			<th scope="row" valign="top">
-				<label
-					for="display_cate_title_flag"><?php 
-        esc_html_e( 'Show category default title?', 'banner-management-for-woocommerce' );
-        ?></label>
-				<span class="banner-woocommerce-help-tip">
-					<div class="alert-desc">
-						<?php 
-        esc_html_e( 'If selected then it will show the default category title on banner with center position.', 'banner-management-for-woocommerce' );
+				<?php 
+        if ( 'product_brand' === $tag->taxonomy ) {
+            ?>
+					<label for="display_cate_title_flag"><?php 
+            esc_html_e( 'Show brand default title?', 'banner-management-for-woocommerce' );
+            ?></label>
+					<span class="banner-woocommerce-help-tip">
+						<div class="alert-desc">
+							<?php 
+            esc_html_e( 'If selected then it will show the default brand title on banner with center position.', 'banner-management-for-woocommerce' );
+            ?>
+						</div>
+					</span>
+				<?php 
+        } else {
+            ?>
+					<label for="display_cate_title_flag"><?php 
+            esc_html_e( 'Show category default title?', 'banner-management-for-woocommerce' );
+            ?></label>
+					<span class="banner-woocommerce-help-tip">
+						<div class="alert-desc">
+							<?php 
+            esc_html_e( 'If selected then it will show the default category title on banner with center position.', 'banner-management-for-woocommerce' );
+            ?>
+						</div>
+					</span>
+				<?php 
+        }
         ?>
-					</div>
-				</span>
 			</th>
 			<td class="top_display">
 				<fieldset>
@@ -817,7 +854,7 @@ class woocommerce_category_banner_management_Admin {
         ?>">
 			<th scope="row"><label class="wbm_leble_setting_css"
 					for="cat_page_banner_title_color"><?php 
-        esc_html_e( 'Select Category title color', 'banner-management-for-woocommerce' );
+        echo ( 'product_brand' === $tag->taxonomy ? esc_html__( 'Select Brand title color', 'banner-management-for-woocommerce' ) : esc_html__( 'Select Category title color', 'banner-management-for-woocommerce' ) );
         ?></label>
 			</th>
 			<td>
@@ -834,7 +871,7 @@ class woocommerce_category_banner_management_Admin {
 			<th scope="row">
 				<label class="wbm_leble_setting_css"
 					for="cat_page_banner_title_color"><?php 
-        esc_html_e( 'Select Category title size.', 'banner-management-for-woocommerce' );
+        echo ( 'product_brand' === $tag->taxonomy ? esc_html__( 'Select Brand title size.', 'banner-management-for-woocommerce' ) : esc_html__( 'Select Category title size.', 'banner-management-for-woocommerce' ) );
         ?></label>
 				<span class="banner-woocommerce-help-tip">
 					<div class="alert-desc">
@@ -850,7 +887,7 @@ class woocommerce_category_banner_management_Admin {
         echo esc_attr( $cat_banner_title_font_size );
         ?>">
 				<div class="counter_total"><?php 
-        esc_html_e( $cat_banner_title_font_size, 'banner-management-for-woocommerce' );
+        echo esc_html( $cat_banner_title_font_size );
         ?></div>
 			</td>
 		</tr>
@@ -937,7 +974,7 @@ class woocommerce_category_banner_management_Admin {
 			<td>
 				<textarea name="term_meta[cat_page_banner_description]" id="cat_page_banner_description" rows="5" cols="50"
 					class="large-text"><?php 
-        esc_html_e( $cat_page_banner_description, 'banner-management-for-woocommerce' );
+        echo esc_html( $cat_page_banner_description );
         ?></textarea>
 			</td>
 		</tr>
@@ -1014,6 +1051,9 @@ class woocommerce_category_banner_management_Admin {
     public function wcbm_save_shop_page_banner_data() {
         // Security check
         check_ajax_referer( 'ajax_verification', 'security' );
+        if ( !current_user_can( 'manage_options' ) ) {
+            wp_die( -1, 403 );
+        }
         // Save global settings
         $shop_page_banner_image_results = filter_input( INPUT_POST, 'shop_page_banner_image_results', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
         $shop_page_banner_image_results = ( !empty( $shop_page_banner_image_results ) ? $shop_page_banner_image_results : '' );
@@ -1542,6 +1582,9 @@ class woocommerce_category_banner_management_Admin {
     public function wcbm_show_category_slider_settings_preview() {
         // Security check
         check_ajax_referer( 'ajax_verification', 'security' );
+        if ( !current_user_can( 'manage_options' ) ) {
+            wp_die( -1, 403 );
+        }
         // Show category slider preview
         $get_wbm_cat_slider_status = filter_input( INPUT_POST, 'wbm_cat_slider_status', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
         $get_wbm_filter_categories = filter_input( INPUT_POST, 'wbm_filter_categories', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
@@ -2552,6 +2595,9 @@ class woocommerce_category_banner_management_Admin {
     public function wcbm_show_product_slider_settings_preview() {
         // Security check
         check_ajax_referer( 'ajax_verification', 'security' );
+        if ( !current_user_can( 'manage_options' ) ) {
+            wp_die( -1, 403 );
+        }
         // Show product slider preview
         $get_wbm_prod_slider_status = filter_input( INPUT_POST, 'wbm_prod_slider_status', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
         $get_wbm_filter_products = filter_input( INPUT_POST, 'wbm_filter_products', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
@@ -3095,6 +3141,9 @@ class woocommerce_category_banner_management_Admin {
      */
     public function wcbm_send_wizard_data_after_plugin_activation() {
         $send_wizard_data = filter_input( INPUT_GET, 'send-wizard-data', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
+        if ( !current_user_can( 'manage_options' ) ) {
+            wp_die( -1, 403 );
+        }
         if ( isset( $send_wizard_data ) && !empty( $send_wizard_data ) ) {
             if ( !get_option( 'wcbm_data_submited_in_sendiblue' ) ) {
                 $wcbm_where_hear = get_option( 'wcbm_where_hear_about_us' );
