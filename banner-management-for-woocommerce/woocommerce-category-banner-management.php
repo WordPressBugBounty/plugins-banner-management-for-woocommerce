@@ -16,7 +16,7 @@
  * Plugin Name: Banner Management For WooCommerce
  * Plugin URI:        https://www.thedotstore.com/woocommerce-category-banner-management/
  * Description:       With this plugin, You can easily add banner in WooCommerce stores and you can upload the banner  specific for page,category  and welcome page.
- * Version:           2.5.2
+ * Version:           2.5.3
  * Author:            theDotstore
  * Author URI:        https://www.thedotstore.com/
  * License:           GPL-2.0+
@@ -25,8 +25,8 @@
  * Domain Path:       /languages
  * Requires Plugins:  woocommerce
  * 
- * WP tested up to:   6.9.4
- * WC tested up to:   10.7.0
+ * WP tested up to:   7.0
+ * WC tested up to:   10.8.1
  * Requires PHP:      7.2
  * Requires at least: 5.0
  */
@@ -85,7 +85,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
         wcbm_fs()->add_action( 'after_uninstall', 'wcbm_fs_uninstall_cleanup' );
     }
     if ( !defined( 'WCBM_PLUGIN_VERSION' ) ) {
-        define( 'WCBM_PLUGIN_VERSION', '2.5.2' );
+        define( 'WCBM_PLUGIN_VERSION', '2.5.3' );
     }
     if ( !defined( 'WCBM_STORE_URL' ) ) {
         define( 'WCBM_STORE_URL', 'https://www.thedotstore.com/' );

@@ -2,10 +2,10 @@
 Contributors: dots
 Tags: product slider, carousel slider, woocommerce slider, product category slider, shop banner
 Donate link: https://www.thedotstore.com/
-Stable tag: 2.5.2
+Stable tag: 2.5.3
 Requires at least: 5.0
-Tested up to: 6.9.4
-WC tested up to: 10.7.0
+Tested up to: 7.0
+WC tested up to: 10.8.1
 Requires PHP: 7.2
 Copyright: (c) 2015-2019 Thedotstore all rights reserved (support@thedotstore.com)
 License: GPLv3 or later
@@ -166,6 +166,9 @@ Add this css on your themes style or any css: <strong>.wbm_banner_image { order:
 
 
 == Changelog ==
+= 2.5.3 =
+* [Bug Fix] Quick fix related to the security check
+
 = 2.5.2 =
 * [New] Added support to assign banners to the new WooCommerce Brand pages.
 * [Bug Fix] Fixed an issue where an unclosed div was hiding product details.

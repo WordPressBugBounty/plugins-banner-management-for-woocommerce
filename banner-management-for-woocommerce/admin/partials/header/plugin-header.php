@@ -36,7 +36,7 @@ echo esc_attr( $plugin_slug );
 echo esc_html_e( $version_label, 'banner-management-for-woocommerce' );
 ?></span>
                     <span class="version-number"><?php 
-echo esc_html( 'v2.5.2' );
+echo esc_html( 'v2.5.3' );
 ?></span>
                 </div>
                 <div class="dots-header-right">

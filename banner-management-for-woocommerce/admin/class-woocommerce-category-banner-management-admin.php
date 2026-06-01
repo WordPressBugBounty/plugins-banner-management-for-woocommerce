@@ -3141,37 +3141,38 @@ class woocommerce_category_banner_management_Admin {
      */
     public function wcbm_send_wizard_data_after_plugin_activation() {
         $send_wizard_data = filter_input( INPUT_GET, 'send-wizard-data', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
-        if ( !current_user_can( 'manage_options' ) ) {
-            wp_die( -1, 403 );
+        if ( empty( $send_wizard_data ) ) {
+            return;
         }
-        if ( isset( $send_wizard_data ) && !empty( $send_wizard_data ) ) {
-            if ( !get_option( 'wcbm_data_submited_in_sendiblue' ) ) {
-                $wcbm_where_hear = get_option( 'wcbm_where_hear_about_us' );
-                $get_user = wcbm_fs()->get_user();
-                $data_insert_array = array();
-                if ( isset( $get_user ) && !empty( $get_user ) ) {
-                    $data_insert_array = array(
-                        'user_email'              => $get_user->email,
-                        'ACQUISITION_SURVEY_LIST' => $wcbm_where_hear,
-                    );
-                }
-                $feedback_api_url = WCBM_STORE_URL . 'wp-json/dotstore-sendinblue-data/v2/dotstore-sendinblue-data?' . wp_rand();
-                $query_url = $feedback_api_url . '&' . http_build_query( $data_insert_array );
-                if ( function_exists( 'vip_safe_wp_remote_get' ) ) {
-                    $response = vip_safe_wp_remote_get(
-                        $query_url,
-                        3,
-                        1,
-                        20
-                    );
-                } else {
-                    $response = wp_remote_get( $query_url );
-                    //phpcs:ignore
-                }
-                if ( !is_wp_error( $response ) && 200 === wp_remote_retrieve_response_code( $response ) ) {
-                    update_option( 'wcbm_data_submited_in_sendiblue', '1' );
-                    delete_option( 'wcbm_where_hear_about_us' );
-                }
+        if ( !current_user_can( 'manage_options' ) ) {
+            return;
+        }
+        if ( !get_option( 'wcbm_data_submited_in_sendiblue' ) ) {
+            $wcbm_where_hear = get_option( 'wcbm_where_hear_about_us' );
+            $get_user = wcbm_fs()->get_user();
+            $data_insert_array = array();
+            if ( isset( $get_user ) && !empty( $get_user ) ) {
+                $data_insert_array = array(
+                    'user_email'              => $get_user->email,
+                    'ACQUISITION_SURVEY_LIST' => $wcbm_where_hear,
+                );
+            }
+            $feedback_api_url = WCBM_STORE_URL . 'wp-json/dotstore-sendinblue-data/v2/dotstore-sendinblue-data?' . wp_rand();
+            $query_url = $feedback_api_url . '&' . http_build_query( $data_insert_array );
+            if ( function_exists( 'vip_safe_wp_remote_get' ) ) {
+                $response = vip_safe_wp_remote_get(
+                    $query_url,
+                    3,
+                    1,
+                    20
+                );
+            } else {
+                $response = wp_remote_get( $query_url );
+                //phpcs:ignore
+            }
+            if ( !is_wp_error( $response ) && 200 === wp_remote_retrieve_response_code( $response ) ) {
+                update_option( 'wcbm_data_submited_in_sendiblue', '1' );
+                delete_option( 'wcbm_where_hear_about_us' );
             }
         }
     }
